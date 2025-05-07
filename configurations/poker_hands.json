@@ -1,0 +1,9 @@
+[
+  {
+    "name": "High Card",
+    "base_chips": 5,
+    "base_mult": 1,
+    "upgrade_chips": 10,
+    "upgrade_mult": 1
+  }
+]
