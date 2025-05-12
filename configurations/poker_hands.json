@@ -5,5 +5,89 @@
     "base_mult": 1,
     "upgrade_chips": 10,
     "upgrade_mult": 1
+  },
+  {
+    "name": "Pair",
+    "base_chips": 10,
+    "base_mult": 2,
+    "upgrade_chips": 15,
+    "upgrade_mult": 1
+  },
+  {
+    "name": "Two Pair",
+    "base_chips": 20,
+    "base_mult": 2,
+    "upgrade_chips": 20,
+    "upgrade_mult": 1
+  },
+  {
+    "name": "Three of a Kind",
+    "base_chips": 30,
+    "base_mult": 3,
+    "upgrade_chips": 20,
+    "upgrade_mult": 2
+  },
+  {
+    "name": "Straight",
+    "base_chips": 30,
+    "base_mult": 4,
+    "upgrade_chips": 30,
+    "upgrade_mult": 3
+  },
+  {
+    "name": "Flush",
+    "base_chips": 35,
+    "base_mult": 4,
+    "upgrade_chips": 15,
+    "upgrade_mult": 2
+  },
+  {
+    "name": "Full House",
+    "base_chips": 40,
+    "base_mult": 4,
+    "upgrade_chips": 25,
+    "upgrade_mult": 2
+  },
+  {
+    "name": "Four of a Kind",
+    "base_chips": 60,
+    "base_mult": 7,
+    "upgrade_chips": 30,
+    "upgrade_mult": 3
+  },
+  {
+    "name": "Straight Flush",
+    "base_chips": 100,
+    "base_mult": 8,
+    "upgrade_chips": 40,
+    "upgrade_mult": 4
+  },
+  {
+    "name": "Royal Flush",
+    "base_chips": 100,
+    "base_mult": 8,
+    "upgrade_chips": 40,
+    "upgrade_mult": 4
+  },
+  {
+    "name": "Five of a Kind",
+    "base_chips": 120,
+    "base_mult": 12,
+    "upgrade_chips": 35,
+    "upgrade_mult": 3
+  },
+  {
+    "name": "Flush House",
+    "base_chips": 140,
+    "base_mult": 14,
+    "upgrade_chips": 40,
+    "upgrade_mult": 4
+  },
+  {
+    "name": "Flush Five",
+    "base_chips": 160,
+    "base_mult": 16,
+    "upgrade_chips": 50,
+    "upgrade_mult": 3
   }
 ]
