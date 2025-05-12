@@ -1,3 +1,5 @@
+import uuid
+
 from base_classes.rank import Rank
 from base_classes.suit import Suit
 
@@ -33,6 +35,7 @@ class Card:
         times_mult: float = 1,
         enhancement: str | None = None,
         edition: str | None = "Base",
+        uid: str | None = None,
     ):
         """
         Initialize the card with a suit and rank.
@@ -48,7 +51,7 @@ class Card:
         assert base_chips >= 0, f"Base chips cannot be negative: {base_chips}"
         assert base_mult >= 0, f"Base multiplier cannot be negative: {base_mult}"
         assert times_mult > 0, f"Times multiplier must be greater than 0: {times_mult}"
-
+        self.uid = str(uuid.uuid4()) if uid is None else uid
         self.suit = suit
         self.rank = rank
         self.base_chips = float(base_chips)
@@ -139,3 +142,22 @@ class Card:
         if self.enhancement == "Stone" or other.enhancement == "Stone":
             return False
         return self.rank == other.rank
+
+    def __str__(self):
+        """
+        Get the string representation of the card.
+
+        :return: The string representation of the card.
+        """
+        if self.enhancement == "Stone":
+            return "Stone"
+        return f"{self.rank}{self.suit}"
+
+    def __repr__(self):
+        """
+        Get the string representation of the card for debugging.
+
+        :return: The string representation of the card.
+        """
+        return (f"Card(suit={self.suit}, rank={self.rank}, base_chips={self.base_chips}, base_mult={self.base_mult},"
+                f" times_mult={self.times_mult}, enhancement={self.enhancement}, edition={self.edition})")
