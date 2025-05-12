@@ -1,3 +1,4 @@
+
 class Suit:
     """
     Represents a suit in balatro.
@@ -26,7 +27,10 @@ class Suit:
         self.symbol = self.symbols[self.suits.index(name)] if name in self.suits else None
 
     def __str__(self):
-        return f"{self.name} ({self.symbol})"
+        return f"{self.symbol}"
+
+    def __repr__(self):
+        return f"Suit({self.name})"
 
     def __eq__(self, other):
         if isinstance(other, Suit):
