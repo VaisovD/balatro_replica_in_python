@@ -95,3 +95,6 @@ class Rank:
 
     def __repr__(self):
         return f"Rank({self.rank})"
+
+    def __hash__(self):
+        return hash(self.rank)
