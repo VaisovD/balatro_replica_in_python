@@ -1,3 +1,4 @@
+import random
 import uuid
 
 from base_classes.rank import Rank
@@ -17,6 +18,7 @@ class Card:
         "Stone",
         "Glass",
         "Wildcard",
+        "Lucky",
     ]
 
     editions = [
@@ -102,6 +104,10 @@ class Card:
         mult = self.base_mult
         if self.enhancement == "Mult":
             mult += 4
+        elif self.enhancement == "Lucky":
+            # 1 in 5 chance to give +20 mult
+            if random.randint(1, 5) == 1:
+                mult += 20
         return mult
 
     def get_times_mult(self) -> float:
@@ -112,7 +118,7 @@ class Card:
         """
         times_mult = self.times_mult
         if self.edition == "Polychrome":
-            times_mult += 1.5
+            times_mult += 0.5
         return times_mult
 
     def compare_suits(self, other) -> bool:
