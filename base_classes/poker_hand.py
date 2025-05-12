@@ -50,7 +50,7 @@ class PokerHand:
     }
     base_mult = {
         "High Card": 1,
-        "One Pair": 2,
+        "Pair": 2,
         "Two Pair": 2,
         "Three of a Kind": 3,
         "Straight": 4,
@@ -65,7 +65,7 @@ class PokerHand:
     }
     upgrade_mult = {
         "High Card": 1,
-        "One Pair": 1,
+        "Pair": 1,
         "Two Pair": 1,
         "Three of a Kind": 2,
         "Straight": 3,
